@@ -4,14 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cody Brock — Platform &amp; Infrastructure Engineer</title>
-  <meta name="description" content="Cody Brock is a software engineer specializing in platform and infrastructure work: Kubernetes, GCP, Terraform, and zero-downtime migrations at fleet scale.">
+  <meta name="description" content="Cody Brock is a software engineer working on platform and infrastructure — Kubernetes on GCP, Terraform, Argo CD.">
   <meta property="og:title" content="Cody Brock — Platform &amp; Infrastructure Engineer">
-  <meta property="og:description" content="I build and operate cloud infrastructure for multi-tenant SaaS.">
+  <meta property="og:description" content="Software engineer working on platform and infrastructure — Kubernetes on GCP, Terraform, Argo CD.">
   <meta property="og:url" content="https://codybrock.dev">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <meta property="og:image" content="https://codybrock.dev/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png" sizes="32x32">
+  <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16181d" media="(prefers-color-scheme: dark)">
   <style>
     :root {
+      color-scheme: light dark;
       --bg: #fdfdfc;
       --text: #1a1a18;
       --muted: #6b6b66;
@@ -65,10 +72,14 @@
       border-top: 1px solid var(--rule);
       margin: 2.25rem 0;
     }
-    p + p { margin-top: 1.25rem; }
+    p + p, p + ul, ul + p { margin-top: 1.25rem; }
+    ul { padding-left: 1.35rem; }
+    li + li { margin-top: 0.5rem; }
     a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
     a:hover { text-decoration-thickness: 2px; }
     nav {
+      display: flex;
+      gap: 1.5rem;
       margin-top: 2.5rem;
       padding-top: 1.75rem;
       border-top: 1px solid var(--rule);
@@ -76,7 +87,6 @@
       font-size: 0.95rem;
       font-weight: 500;
     }
-    nav a + a { margin-left: 1.5rem; }
     @media (max-width: 480px) {
       main { padding-top: 3.5rem; }
       h1 { font-size: 1.65rem; }
@@ -93,10 +103,25 @@
 
     <hr>
 
-    <p>I build and operate cloud infrastructure for multi-tenant SaaS — Kubernetes, GCP, Terraform, ArgoCD. Since 2021 I&rsquo;ve been doing that at <a href="https://bevy.com">Bevy</a>.</p>
+    <p>I&rsquo;m a software engineer working on platform and infrastructure. Since 2021 I&rsquo;ve been at <a href="https://bevy.com">Bevy</a>, where I build and operate cloud infrastructure (Kubernetes on GCP, Terraform, Argo CD) for a multi-tenant platform used by enterprise brands.</p>
+
+    <p>Recent work:</p>
+    <ul>
+      <li>migrated our full fleet of customer instances to new VPC-native GKE clusters with zero downtime</li>
+      <li>built the Kubernetes serving tier for a new Next.js frontend and took it to 100% of production traffic</li>
+      <li>remediated and hardened infrastructure ahead of a successful SOC&nbsp;2 Type&nbsp;II audit, and rolled out the code-scanning platform that keeps findings closed</li>
+      <li>cut total cloud spend 25% through successive redesigns of the async-worker tier and a move to shared node pools</li>
+      <li>replaced the on-call and incident-response platform, codifying schedules and escalations in Terraform and cutting tooling costs 57%; alerts now carry their runbooks and context, so a 3am page arrives with answers</li>
+    </ul>
+
+    <p>My default approach: make the change reversible, canary it on real workloads, roll it out in risk-ranked batches, and delete the scaffolding when it&rsquo;s done.</p>
+
+    <p>Certified Kubernetes Administrator (CKA). Before software I was an operations manager at a luxury adventure-travel company, and before that I studied history at UC Berkeley.</p>
 
     <nav>
-      <a href="https://github.com/cody-brock">GitHub</a><a href="https://www.linkedin.com/in/cody-brock-dev/">LinkedIn</a><a href="mailto:codylewisbrock@gmail.com">Email</a>
+      <a href="https://github.com/cody-brock">GitHub</a>
+      <a href="https://www.linkedin.com/in/cody-brock-dev/">LinkedIn</a>
+      <a href="mailto:codylewisbrock@gmail.com">Email</a>
     </nav>
   </main>
 </body>
